@@ -2,13 +2,15 @@
 
 package tests;
 
-import com.codeborne.selenide.Selenide;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.sleep;
+import java.util.List;
 
-public class ApartmentBuy extends BaseTest{
+import static com.codeborne.selenide.Selenide.*;
+
+public class FlatBuy extends BaseTest {
     @Test
     public void buy() {
         /*
@@ -26,6 +28,9 @@ public class ApartmentBuy extends BaseTest{
         //1. Нажать Купить
         $x("//span[@data-test='buy-tab']").click();
         //2. Заполнить поля
+        //$x("//div[@class='select-module--wrapper--8677a']//div[@class='select-module--checkbox--5af48']");
+        //List<WebElement> checBox = $x("//div[@class='select-module--wrapper--8677a']//div[@class='select-module--checkbox--5af48']");
+
 
         // 3. Нажатие кнопки найти
         $x("//button[@data-gtm='main-click-promo-block-buytab-search-button']").click();

@@ -7,7 +7,7 @@ import org.junit.Test;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class ApartmentRent extends BaseTest {
+public class FlatRent extends BaseTest {
     /*
         1. Нажать кнопку Снять
         2. Заполнить поля
