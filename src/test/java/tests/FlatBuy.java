@@ -6,7 +6,9 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.List;
 
@@ -33,37 +35,34 @@ public class FlatBuy extends BaseTest {
 
         //2. Заполнить поле Квартиру
         $x("//div[text()='Квартиру']").click();
-        List<SelenideElement> flatList = $$x("//div[@class='select-module--content--cf355']");
-        flatList.get(0).click();
+        List<SelenideElement> flatListBuy = $$x("//div[@class='select-module--content--cf355']");
+        flatListBuy.get(0).click();
 
         //Заполнить поле: Комнат
-        //прописать массив из поля Регион
-        $x("//div[text()='Комнат']").click();
-        List<SelenideElement> roomsList = $$x("//div[@class='select-module--option--d5f8f']");
-        roomsList.get(2).click();
+        List<SelenideElement> rooms = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
+        rooms.get(0).click();
+        $x("//div[@data-test='room-select-option:ROOM_2']").click();
 
-
-        //Прописать массив из поля Регион
         //Заполнить поле: Цена
-        $x("//div[text()='Цена']").click();
+        List<SelenideElement> priceFlatBuy = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
+        priceFlatBuy.get(1).click();
         $x("//div[@data-test='price-preset-to-10000000']").click();
-        sleep(5000);
 
         //Заполнить поле: Регион
-        List<SelenideElement> region =$$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
-        region.get(2).click();
-        sleep(5000);
-        //выбрать регион
+        List<SelenideElement> regionFlatBuy = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
+        regionFlatBuy.get(2).click();
+        $x("//div[text()='Московская область']").click();
 
         // 3. Нажатие кнопки найти
         $x("//button[@data-gtm='main-click-promo-block-buytab-search-button']").click();
 
-
-        //4. Зайти в первое объявление
-
+        //4. Зайти в третье объявление
+        List<SelenideElement> numberAnnouncementBuy = $$x("//div[@class='LayoutSnippet__main']");
+        numberAnnouncementBuy.get(2).click();
 
         // 5. Показать номер телефона
-        $x("//button[@data-test='phone-button']").click();
+        List<SelenideElement> numberPhoneBuy = $$x("//span[text()='Показать телефон']");
+        numberPhoneBuy.get(0).click();
         sleep(5000);
     }
 }
