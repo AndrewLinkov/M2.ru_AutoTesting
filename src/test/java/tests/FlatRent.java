@@ -52,7 +52,7 @@ public class FlatRent extends BaseTest {
 
 //        4. Зайти в первое объявление
         List<SelenideElement> numberAnnouncementRent = $$x("//div[@class='LayoutSnippet__main']");
-        numberAnnouncementRent.get(2).click();
+        numberAnnouncementRent.get(0).click();
         sleep(5000);
 
 //        5. Показать номер телефон
