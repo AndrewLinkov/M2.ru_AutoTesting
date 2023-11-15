@@ -1,35 +1,33 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+
 import java.util.List;
+
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class PageBuy {
-    private SelenideElement clickBuy = $x("//span[@data-test='buy-tab']");
-    private SelenideElement entryFieldFlat = $x("//div[text()='Квартиру']");
-    private List<SelenideElement> typeRoomFlat = $$x("//div[@class='select-module--content--cf355']");
+public class PageRent {
+    private SelenideElement buttonRent = $x("//span[@data-test='rent-tab']");
+    private List<SelenideElement> entryFieldFlat = $$x("//div[@class='button-module--content--73991 button-module--single--0e4e5']");
     private List<SelenideElement> buttonCountRoom = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
     private SelenideElement countRoom = $x("//div[@data-test='room-select-option:ROOM_2']");
-    private List<SelenideElement> buttonPrice = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
-    private SelenideElement priceRoom = $x("//div[@data-test='price-preset-to-10000000']");
-    private List<SelenideElement> entryFieldRegion = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
-    private SelenideElement region = $x("//div[text()='Московская область']");
-    private SelenideElement buttonSearch = $x("//button[@data-gtm='main-click-promo-block-buytab-search-button']");
+    private List<SelenideElement> buttonPrice = $$x("//button[@class='button-module--button--acedd" +
+            " button-module--l--92e06 button-module--primary--643a5 button-module--block--a5680']");
+    private SelenideElement priceRoom = $x("//div[@class='input-module--wrapper--059b4 input-module--group--735f8']");
+    private List<SelenideElement> buttonRegion = $$x("//div[@class='button-module--content--73991 button-module--single--0e4e5']");
+    private SelenideElement region = $x("//div[@data-test='region-select-option:108']");
+    private SelenideElement buttonSearch = $x("//button[@data-gtm='main-click-promo-block-renttab-search-button']");
     private List<SelenideElement> enterOneRoom = $$x("//div[@class='LayoutSnippet__main']");
     private SelenideElement buttonPhoneNumber = $x("(//span[text()='Показать телефон'])[1]");
 
 
-    public SelenideElement getClickBuy() {
-        return clickBuy;
+    public SelenideElement getButtonRent() {
+        return buttonRent;
     }
 
-    public SelenideElement getEntryFieldFlat() {
+    public List<SelenideElement> getEntryFieldFlat() {
         return entryFieldFlat;
-    }
-
-    public List<SelenideElement> getTypeRoomFlat() {
-        return typeRoomFlat;
     }
 
     public List<SelenideElement> getButtonCountRoom() {
@@ -48,8 +46,8 @@ public class PageBuy {
         return priceRoom;
     }
 
-    public List<SelenideElement> getEntryFieldRegion() {
-        return entryFieldRegion;
+    public List<SelenideElement> getButtonRegion() {
+        return buttonRegion;
     }
 
     public SelenideElement getRegion() {
