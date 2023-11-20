@@ -2,19 +2,20 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+
 
 public class BaseTest {
-    @Before
-    public void beforeAll() {
+    @BeforeAll
+    public static void beforeAll() {
         System.setProperty("selenide.browser", "firefox");
         Configuration.browserSize = "1920x1080";
         Selenide.open("https://m2.ru/");
     }
 
-    @After
-    public void tearDown() {
+    @AfterAll
+    public static void tearDown() {
         Selenide.closeWebDriver();
     }
 }

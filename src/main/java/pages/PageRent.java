@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PageRent {
-    private SelenideElement buttonRent = $x("//span[@data-test='rent-tab']");
+    private SelenideElement clickRent = $x("//span[@data-test='rent-tab']");
     private List<SelenideElement> entryFieldFlat = $$x("//div[@class='button-module--content--73991 button-module--single--0e4e5']");
     private List<SelenideElement> buttonCountRoom = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
     private SelenideElement countRoom = $x("//div[@data-test='room-select-option:ROOM_2']");
@@ -22,8 +22,8 @@ public class PageRent {
     private SelenideElement buttonPhoneNumber = $x("(//span[text()='Показать телефон'])[1]");
 
 
-    public SelenideElement getButtonRent() {
-        return buttonRent;
+    public SelenideElement getClickRent() {
+        return clickRent;
     }
 
     public List<SelenideElement> getEntryFieldFlat() {
