@@ -15,12 +15,12 @@ import static com.codeborne.selenide.Selenide.switchTo;
 public class RentService {
     private PageRent pageRent = new PageRent();
     private int rooms;
-    private int coasts;
+    private int price;
     private String region;
 
-    public RentService(int rooms, int coasts, String region ) {
+    public RentService(int rooms, int price, String region ) {
         this.rooms = rooms;
-        this.coasts = coasts;
+        this.price = price;
         this.region = region;
     }
 
@@ -56,16 +56,20 @@ public class RentService {
         pageRent.getRegion().click();
 
         //10. Нажать кнопку: Найти
-        pageRent.getButtonSearch().click();
+        //pageRent.getButtonSearch().click();
+        CommonElements.getSearchButton("Найти",2).shouldBe(Condition.interactable, Duration.ofSeconds(7)).click();
 
         //11. Зайти в первое объявление
         List<SelenideElement> numberAnnouncementRent = pageRent.getEnterOneRoom();
         numberAnnouncementRent.get(0).click();
 
-        //12. Показать номер телефон
+        //12. Показать второе окно
         switchTo().window(1);
 
-        pageRent.getButtonPhoneNumber().click();
+        //13. Нажать показать телефон
+        CommonElements.getSearchButton("Показать телефон", 1).shouldBe(Condition.interactable, Duration.ofSeconds(7)).click();
+
+        //14. Проверка на наличие QR кода
         ResultPageQRCode resultPageQRCode = new ResultPageQRCode();
         resultPageQRCode.getQrCodeIconBuyFlat().shouldBe(Condition.visible, Duration.ofSeconds(10));
         return resultPageQRCode;

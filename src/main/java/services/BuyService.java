@@ -12,10 +12,10 @@ import java.util.List;
 import static com.codeborne.selenide.Selenide.switchTo;
 
 public class BuyService {
-    private PageBuy pageBuy = new PageBuy();
-    private int rooms;
-    private int coasts;
-    private String region;
+    private final PageBuy pageBuy = new PageBuy();
+    private final int rooms;
+    private final int coasts;
+    private final String region;
 
     public BuyService(int rooms, int coasts, String region) {
         this.rooms = rooms;
@@ -63,10 +63,11 @@ public class BuyService {
 
         //12. Показать второе окно
         switchTo().window(1);
-        //ожидание
-        //Нажатие
+
+        //13. Нажать показать телелфон
         CommonElements.getSearchButton("Показать телефон", 1).shouldBe(Condition.interactable, Duration.ofSeconds(7)).click();
 
+        //14. Проверка на наличие QR кода
         ResultPageQRCode resultPageQRCode = new ResultPageQRCode();
         resultPageQRCode.getQrCodeIconBuyFlat().shouldBe(Condition.visible, Duration.ofSeconds(10));
         return resultPageQRCode;
