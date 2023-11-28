@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class PageBuy {
     private SelenideElement clickBuy = $x("//span[@data-test='buy-tab']");
     private SelenideElement entryFieldFlat = $x("//div[text()='Квартиру']");
-    private List<SelenideElement> typeRoomFlat = $$x("//div[@class='select-module--content--cf355']");
+    private List<SelenideElement> typeRoom = $$x("//div[@class='select-module--content--cf355']");
     private List<SelenideElement> buttonCountRoom = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
     private SelenideElement countRoom = $x("//div[@data-test='room-select-option:ROOM_2']");
     private List<SelenideElement> buttonPrice = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
@@ -28,8 +28,8 @@ public class PageBuy {
         return entryFieldFlat;
     }
 
-    public List<SelenideElement> getTypeRoomFlat() {
-        return typeRoomFlat;
+    public List<SelenideElement> getTypeRoom() {
+        return typeRoom;
     }
 
     public List<SelenideElement> getButtonCountRoom() {

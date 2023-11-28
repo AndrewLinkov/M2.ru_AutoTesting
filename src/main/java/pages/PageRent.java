@@ -9,11 +9,11 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class PageRent {
     private SelenideElement clickRent = $x("//span[@data-test='rent-tab']");
-    private List<SelenideElement> entryFieldFlat = $$x("//div[@class='button-module--content--73991 button-module--single--0e4e5']");
+    private List<SelenideElement> entryFieldFlat = $$x("//div[text()='Квартиру']");
+    private List<SelenideElement> typeRoom = $$x("//div[@class='select-module--content--cf355']");
     private List<SelenideElement> buttonCountRoom = $$x("//div[@class='button-module--wrapper--e416d button-module--block--a5680 button-module--group--fb99c']");
     private SelenideElement countRoom = $x("//div[@data-test='room-select-option:ROOM_2']");
-    private List<SelenideElement> buttonPrice = $$x("//button[@class='button-module--button--acedd" +
-            " button-module--l--92e06 button-module--primary--643a5 button-module--block--a5680']");
+    private List<SelenideElement> buttonPrice = $$x("//button[@class='button-module--button--acedd button-module--l--92e06 button-module--primary--643a5 button-module--block--a5680']");
     private SelenideElement priceRoom = $x("//div[@class='input-module--wrapper--059b4 input-module--group--735f8']");
     private List<SelenideElement> buttonRegion = $$x("//div[@class='button-module--content--73991 button-module--single--0e4e5']");
     private SelenideElement region = $x("//div[@data-test='region-select-option:108']");
@@ -29,6 +29,8 @@ public class PageRent {
     public List<SelenideElement> getEntryFieldFlat() {
         return entryFieldFlat;
     }
+
+    public List<SelenideElement> getTypeRoom() {return typeRoom;}
 
     public List<SelenideElement> getButtonCountRoom() {
         return buttonCountRoom;

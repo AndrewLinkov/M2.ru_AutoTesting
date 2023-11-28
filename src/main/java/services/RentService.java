@@ -9,6 +9,7 @@ import pages.ResultPageQRCode;
 import java.time.Duration;
 import java.util.List;
 
+import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.Selenide.switchTo;
 
 public class RentService {
@@ -27,38 +28,41 @@ public class RentService {
         //1. Нажать кнопку Снять
         pageRent.getClickRent().click();
 
-        //2. выбрать поле: Квартиру
-        CommonElements.getElement("Квартиру").click();
+        //2. Нажать кнопку тип помещения
+        List<SelenideElement> flatListRent = pageRent.getEntryFieldFlat();
+        flatListRent.get(1).click();
 
-//        List<SelenideElement> flatListRent = pageRent.getEntryFieldFlat();
-//        flatListRent.get(4).click();
+        //3. Выбрать помещение - Квартира
+        List<SelenideElement> listTypeRoom = pageRent.getTypeRoom();
+        listTypeRoom.get(0).click();
 
-        //3.Нажать на кнопку "Комнат"
+        //4.Нажать на кнопку "Комнат"
         List<SelenideElement> rooms = pageRent.getButtonCountRoom();
         rooms.get(3).click();
-        //4. Выбрать значение "2-ч комнатная"
+
+        //5. Выбрать значение "2-ч комнатная"
         pageRent.getCountRoom().click();
 
-        //5. Нажать на кнопку "Цена"
+        //6. Нажать на кнопку "Цена"
         List<SelenideElement> priceFlatRent = pageRent.getButtonPrice();
         priceFlatRent.get(4).click();
-        //6. Выбрать стоимость
+        //7. Выбрать стоимость
         pageRent.getPriceRoom().click();
 
-        //7. Нажать кнопку регион
+        //8. Нажать кнопку регион
         List<SelenideElement> regionFlatRent = pageRent.getButtonRegion();
         regionFlatRent.get(7).click();
-        //8. Выбрать регион
+        //9. Выбрать регион
         pageRent.getRegion().click();
 
-        //9. Нажать кнопку: Найти
+        //10. Нажать кнопку: Найти
         pageRent.getButtonSearch().click();
 
-        //10. Зайти в первое объявление
+        //11. Зайти в первое объявление
         List<SelenideElement> numberAnnouncementRent = pageRent.getEnterOneRoom();
         numberAnnouncementRent.get(0).click();
 
-        //11. Показать номер телефон
+        //12. Показать номер телефон
         switchTo().window(1);
 
         pageRent.getButtonPhoneNumber().click();
