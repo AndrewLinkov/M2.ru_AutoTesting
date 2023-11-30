@@ -10,7 +10,7 @@ import services.BuyService;
 public class FlatBuy extends BaseTest {
     @Test
     public void buy() {
-        BuyService buyService = new BuyService(2, 1000000, "Москва");
+        BuyService buyService = new BuyService();
         Assertions.assertTrue(buyService.buyFlat().getQrCodeIconBuyFlat().is(Condition.visible));
     }
 }

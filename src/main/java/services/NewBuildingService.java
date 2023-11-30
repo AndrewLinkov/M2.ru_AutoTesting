@@ -1,5 +1,6 @@
 package services;
 
+import org.openqa.selenium.Keys;
 import pages.PageNewBuilding;
 import pages.ResultPageQRCode;
 
@@ -24,10 +25,13 @@ public class NewBuildingService {
     public ResultPageQRCode buyNewBuilding() {
         //1. Нажать вкладку Новостройки
         pageNewBuilding.getClickNewBuilding().click();
-        sleep(5000);
         // Выбрать поле Название ЖК
+        pageNewBuilding.getEntryFieldNameJK().click();
+        //pageNewBuilding.getEntryFieldNameJK().sendKeys(Keys.ARROW_DOWN,Keys.ENTER);
+        sleep(5000);
         // Заполнить поле Название ЖК
-
+        pageNewBuilding.getEntryFieldNameJK().setValue(nameComplex);
+        pageNewBuilding.getEntryFieldNameJK().sendKeys(Keys.ARROW_UP,Keys.ENTER);
         // Выбрать поле Кол-во комнат
         // Заполнить поле Кол-во комнат
 

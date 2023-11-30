@@ -9,7 +9,7 @@ public class NewBuilding extends BaseTest{
     @Test
     public void newBuildings() {
         NewBuildingService newBuildingService = new NewBuildingService(
-                "ЖК ФЕНИКС",
+                "ЖК ФЕНИКC",
                 2,
                 15000000,
                 "Любой",

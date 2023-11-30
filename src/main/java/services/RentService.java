@@ -9,20 +9,10 @@ import pages.ResultPageQRCode;
 import java.time.Duration;
 import java.util.List;
 
-import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.Selenide.switchTo;
 
 public class RentService {
-    private PageRent pageRent = new PageRent();
-    private int rooms;
-    private int price;
-    private String region;
-
-    public RentService(int rooms, int price, String region ) {
-        this.rooms = rooms;
-        this.price = price;
-        this.region = region;
-    }
+    PageRent pageRent = new PageRent();
 
     public ResultPageQRCode rentFlat() {
         //1. Нажать кнопку Снять
@@ -57,7 +47,7 @@ public class RentService {
 
         //10. Нажать кнопку: Найти
         //pageRent.getButtonSearch().click();
-        CommonElements.getSearchButton("Найти",2).shouldBe(Condition.interactable, Duration.ofSeconds(7)).click();
+        CommonElements.getSearchButton("Найти", 2).shouldBe(Condition.interactable, Duration.ofSeconds(7)).click();
 
         //11. Зайти в первое объявление
         List<SelenideElement> numberAnnouncementRent = pageRent.getEnterOneRoom();

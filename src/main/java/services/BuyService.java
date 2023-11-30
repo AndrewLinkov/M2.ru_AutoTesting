@@ -12,16 +12,7 @@ import java.util.List;
 import static com.codeborne.selenide.Selenide.switchTo;
 
 public class BuyService {
-    private final PageBuy pageBuy = new PageBuy();
-    private final int rooms;
-    private final int coasts;
-    private final String region;
-
-    public BuyService(int rooms, int coasts, String region) {
-        this.rooms = rooms;
-        this.coasts = coasts;
-        this.region = region;
-    }
+    PageBuy pageBuy = new PageBuy();
 
     public ResultPageQRCode buyFlat() {
         //1. Нажать кнопку купить
@@ -54,7 +45,7 @@ public class BuyService {
         pageBuy.getRegion().click();
 
         //10. Нажатие кнопки "Найти"
-        CommonElements.getSearchButton("Найти",1).click();
+        CommonElements.getSearchButton("Найти", 1).click();
 //        pageBuy.getButtonSearch().click();
 
         //11. Зайти в первое объявление
