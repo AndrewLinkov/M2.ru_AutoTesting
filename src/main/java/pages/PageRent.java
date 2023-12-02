@@ -7,7 +7,7 @@ import java.util.List;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class PageRent {
+public class PageRent<clickRent> {
     private SelenideElement clickRent = $x("//span[@data-test='rent-tab']");
     private List<SelenideElement> entryFieldFlat = $$x("//div[text()='Квартиру']");
     private List<SelenideElement> typeRoom = $$x("//div[@class='select-module--content--cf355']");
