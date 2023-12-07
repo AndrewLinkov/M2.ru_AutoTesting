@@ -11,7 +11,6 @@ import services.BuyService;
 
 public class FlatBuy extends BaseTest {
     @Test
-    @Owner("Андрей Линьков")
     @Description("Автотест проверяет страницу 'Купить', заполняет поля, и проваливается" +
             "в первое объявление поиска и выводит на экран номер телефона продавца")
     public void buy() {
