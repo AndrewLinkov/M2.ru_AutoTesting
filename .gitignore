@@ -2,6 +2,8 @@
 .allure
 out
 *.iml
+*.yml
+.jar
 
 # Project exclude paths
 /target/
