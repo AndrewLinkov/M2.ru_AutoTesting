@@ -1,10 +1,9 @@
 .idea
 .allure/
 build/
+/target/
 out
 *.iml
 *.yml
 .jar
-
-# Project exclude paths
-/target/
+.exe
