@@ -6,4 +6,4 @@ out
 *.iml
 *.yml
 .jar
-.exe
+*.exe
