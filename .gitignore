@@ -4,5 +4,5 @@ out
 
 # Project exclude paths
 /target/
-/build/
-/.allure/
+/build
+/.allure
