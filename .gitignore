@@ -1,5 +1,5 @@
 .idea
-.allure
+.allure/
 out
 *.iml
 *.yml
@@ -7,4 +7,4 @@ out
 
 # Project exclude paths
 /target/
-/build
+build/
