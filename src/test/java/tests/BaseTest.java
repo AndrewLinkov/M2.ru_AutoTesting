@@ -10,12 +10,9 @@ public class BaseTest {
     @BeforeAll
     public static void beforeAll() {
         System.setProperty("selenide.browser", "firefox");
-        //System.setProperty("webdriver.chrome.driver", "D:\\!документы Андрей\\Desktop\\AutoTesting\\M2.ru_AutoTesting\\chromedriver.exe");
         Configuration.browserSize = "1920x1080";
         Selenide.open("https://m2.ru/");
-        //SelenideLogger.addListener("AllureSelenide",new B);
     }
-
     @AfterAll
     public static void tearDown() {
         Selenide.closeWebDriver();

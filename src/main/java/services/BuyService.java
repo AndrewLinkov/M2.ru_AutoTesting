@@ -2,6 +2,7 @@ package services;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import pages.CommonElements;
 import pages.ResultPageQRCode;
 import pages.PageBuy;
@@ -14,6 +15,7 @@ import static com.codeborne.selenide.Selenide.switchTo;
 public class BuyService {
     PageBuy pageBuy = new PageBuy();
 
+    @Step("Выбор вкладки 'Купить', заполнение полей ввода")
     public ResultPageQRCode buyFlat() {
         //1. Нажать кнопку купить
         pageBuy.getClickBuy().click();
@@ -43,6 +45,7 @@ public class BuyService {
         regionFlatBuy.get(2).click();
         //9 Выбрать регион Московская область
         pageBuy.getRegion().click();
+
 
         //10. Нажатие кнопки "Найти"
         CommonElements.getSearchButton("Найти", 1).click();

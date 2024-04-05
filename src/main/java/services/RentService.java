@@ -51,7 +51,7 @@ public class RentService {
 
         //11. Зайти в первое объявление
         List<SelenideElement> numberAnnouncementRent = pageRent.getEnterOneRoom();
-        numberAnnouncementRent.get(0).click();
+        numberAnnouncementRent.get(1).click();
 
         //12. Показать второе окно
         switchTo().window(1);
