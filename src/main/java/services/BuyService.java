@@ -17,6 +17,7 @@ public class BuyService {
 
     @Step("Выбор вкладки 'Купить', заполнение полей ввода")
     public ResultPageQRCode buyFlat() {
+
         //1. Нажать кнопку купить
         pageBuy.getClickBuy().click();
 

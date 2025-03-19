@@ -1,5 +1,3 @@
-// класс покупки квартиры
-
 package tests;
 
 import com.codeborne.selenide.Condition;
@@ -10,8 +8,8 @@ import services.BuyService;
 
 public class FlatBuy extends BaseTest {
     @Test
-    @Description("Автотест проверяет страницу 'Купить', заполняет поля, и проваливается" +
-            "в первое объявление поиска и выводит на экран номер телефона продавца")
+    @Description("ТК проверки вкладки 'Купить'. Автотест заполняет поля, и проваливается" +
+            "в первое объявление поиска, выводит на экран номер телефона продавца")
     public void buy() {
         BuyService buyService = new BuyService();
         Assertions.assertTrue(buyService.buyFlat().getQrCodeIconBuyFlat().is(Condition.visible));

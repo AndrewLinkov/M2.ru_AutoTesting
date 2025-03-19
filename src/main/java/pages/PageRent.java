@@ -30,7 +30,9 @@ public class PageRent<clickRent> {
         return entryFieldFlat;
     }
 
-    public List<SelenideElement> getTypeRoom() {return typeRoom;}
+    public List<SelenideElement> getTypeRoom() {
+        return typeRoom;
+    }
 
     public List<SelenideElement> getButtonCountRoom() {
         return buttonCountRoom;

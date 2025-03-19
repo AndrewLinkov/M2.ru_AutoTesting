@@ -14,5 +14,4 @@ public class CommonElements {
     public static SelenideElement getSearchButton(String nameButton, int index) {
         return $x("(//span[text()='" + nameButton + "'])[" + index + "]");
     }
-
 }
