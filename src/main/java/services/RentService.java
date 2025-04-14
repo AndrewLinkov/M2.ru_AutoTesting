@@ -36,17 +36,18 @@ public class RentService {
         //6. Нажать на кнопку "Цена"
         List<SelenideElement> priceFlatRent = pageRent.getButtonPrice();
         priceFlatRent.get(4).click();
+
         //7. Выбрать стоимость
         pageRent.getPriceRoom().click();
 
         //8. Нажать кнопку регион
         List<SelenideElement> regionFlatRent = pageRent.getButtonRegion();
         regionFlatRent.get(7).click();
+
         //9. Выбрать регион
         pageRent.getRegion().click();
 
         //10. Нажать кнопку: Найти
-        //pageRent.getButtonSearch().click();
         CommonElements.getSearchButton("Найти", 2).shouldBe(Condition.interactable, Duration.ofSeconds(7)).click();
 
         //11. Зайти в первое объявление

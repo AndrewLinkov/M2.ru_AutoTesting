@@ -21,7 +21,6 @@ public class PageRent<clickRent> {
     private List<SelenideElement> enterOneRoom = $$x("//div[@class='LayoutSnippet__main']");
     private SelenideElement buttonPhoneNumber = $x("(//span[text()='Показать телефон'])[1]");
 
-
     public SelenideElement getClickRent() {
         return clickRent;
     }

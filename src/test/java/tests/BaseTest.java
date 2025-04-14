@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeAll;
 public class BaseTest {
     @BeforeAll
     @Step("Открытие главной страницы приложения M2.RU")
-    public static void beforeAll() {
+    public static void openStartPage() {
         System.setProperty("selenide.browser", "firefox");
         Configuration.browserSize = "1920x1080";
         Selenide.open("https://m2.ru/");
@@ -20,7 +20,7 @@ public class BaseTest {
 
     @AfterAll
     @Step("Закрытие браузера")
-    public static void tearDown() {
+    public static void closeBrowser() {
         Selenide.closeWebDriver();
     }
 }

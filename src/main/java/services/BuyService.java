@@ -44,13 +44,12 @@ public class BuyService {
         //8. Нажать на кнопку "Регион"
         List<SelenideElement> regionFlatBuy = pageBuy.getEntryFieldRegion();
         regionFlatBuy.get(2).click();
+
         //9 Выбрать регион Московская область
         pageBuy.getRegion().click();
 
-
         //10. Нажатие кнопки "Найти"
         CommonElements.getSearchButton("Найти", 1).click();
-//        pageBuy.getButtonSearch().click();
 
         //11. Зайти в первое объявление
         List<SelenideElement> numberAnnouncementBuy = pageBuy.getEnterOneRoom();

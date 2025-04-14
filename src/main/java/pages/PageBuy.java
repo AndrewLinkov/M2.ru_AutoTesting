@@ -19,7 +19,6 @@ public class PageBuy {
     private List<SelenideElement> enterOneRoom = $$x("//div[@class='LayoutSnippet__main']");
     private SelenideElement buttonPhoneNumber = $x("(//span[text()='Показать телефон'])[1]");
 
-
     public SelenideElement getClickBuy() {
         return clickBuy;
     }
