@@ -13,6 +13,7 @@ import java.util.List;
 import static com.codeborne.selenide.Selenide.switchTo;
 
 public class BuyService {
+
     PageBuy pageBuy = new PageBuy();
 
     @Step("Выбор вкладки 'Купить', заполнение полей ввода")

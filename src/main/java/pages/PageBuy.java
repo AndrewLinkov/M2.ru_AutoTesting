@@ -6,6 +6,7 @@ import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PageBuy {
+
     private SelenideElement clickBuy = $x("//span[@data-test='buy-tab']");
     private SelenideElement entryFieldFlat = $x("//div[text()='Квартиру']");
     private List<SelenideElement> typeRoom = $$x("//div[@class='select-module--content--cf355']");
